@@ -11,7 +11,7 @@ const repos = [
     forks: 0,
     lang: "Python",
     langColor: "#3572A5",
-    url: "https://github.com/shammas/soledrop",
+    url: "https://github.com/iamshammas/soledrop",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function GitHub() {
               Building in public
             </h2>
             <a
-              href="https://github.com/shammas"
+              href="https://github.com/iamshammas"
               target="_blank"
               rel="noreferrer"
               style={{
@@ -162,7 +162,7 @@ export default function GitHub() {
               to understand at a deeper level.
             </p>
             <a
-              href="https://github.com/shammas"
+              href="https://github.com/iamshammas"
               target="_blank"
               rel="noreferrer"
               style={{
@@ -176,7 +176,7 @@ export default function GitHub() {
                 textDecoration: "none",
               }}
             >
-              github.com/shammas <ExternalLink size={13} />
+              github.com/iamshammas <ExternalLink size={13} />
             </a>
           </div>
         </div>

@@ -137,7 +137,7 @@ export default function Projects() {
 
             <div style={{ display: "flex", gap: "0.75rem" }}>
               <a
-                href="https://github.com/shammas/soledrop"
+                href="https://github.com/iamshammas/soledrop"
                 target="_blank"
                 rel="noreferrer"
                 style={{

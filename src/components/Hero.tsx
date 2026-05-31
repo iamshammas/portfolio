@@ -301,8 +301,8 @@ export default function Hero() {
 
           {/* Social icons */}
           {[
-            { href: "https://github.com/shammas", icon: <GitBranch size={18} />, label: "GitHub" },
-            { href: "https://linkedin.com/in/shammas", icon: <Link2 size={18} />, label: "LinkedIn" },
+            { href: "https://github.com/iamshammas", icon: <GitBranch size={18} />, label: "GitHub" },
+            { href: "https://linkedin.com/in/iamshammas", icon: <Link2 size={18} />, label: "LinkedIn" },
             { href: "mailto:muhdshammas612@gmail.com", icon: <Mail size={18} />, label: "Email" },
           ].map((s) => (
             <a
