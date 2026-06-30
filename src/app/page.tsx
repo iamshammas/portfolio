@@ -9,10 +9,12 @@ import GitHub from "@/components/GitHub";
 import Now from "@/components/Now";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CursorTrail from "@/components/CursorTrail";
 
 export default function Home() {
   return (
     <>
+      <CursorTrail />
       <Navbar />
       <main>
         <Hero />
