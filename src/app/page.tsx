@@ -10,11 +10,14 @@ import Now from "@/components/Now";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CursorTrail from "@/components/CursorTrail";
+import CursorDot from "@/components/CursorDot";
+
 
 export default function Home() {
   return (
     <>
       <CursorTrail />
+      <CursorDot />
       <Navbar />
       <main>
         <Hero />
