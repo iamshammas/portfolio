@@ -5,29 +5,29 @@ import { MapPin, Zap } from "lucide-react";
 
 const nowItems = [
   {
-    emoji: "💼",
-    heading: "Working at Bridgeon Skillversity",
-    body: "As an Academic Advisor in an EdTech environment that trains developers. It keeps me close to the industry and forces me to communicate technical ideas clearly.",
+    emoji: "🎯",
+    heading: "Actively job hunting",
+    body: "Looking for Django Developer, Python Backend Developer, and Junior Software Engineer roles. Left my Academic Advisor role at Bridgeon Skillversity in June 2026 to study full-time and focus on this transition.",
   },
   {
-    emoji: "🔨",
-    heading: "Building a DRF REST API",
-    body: "A standalone backend project using Django REST Framework, JWT auth, and PostgreSQL. No templates — just a clean API designed to be consumed by a separate client. Documenting the build on GitHub.",
+    emoji: "📚",
+    heading: "Going deep on Django REST Framework",
+    body: "Working through APIView, GenericAPIView, Mixins, Generic Views, and ViewSets. Currently learning Nested Serializers and getting more practice with ViewSets specifically.",
   },
   {
-    emoji: "🛡️",
-    heading: "Revisiting web application security",
-    body: "Going back through OWASP Top 10 from a developer's perspective. The CPT cert gave me attacker thinking — now I want to apply that to how I write code.",
+    emoji: "🗄️",
+    heading: "Practicing PostgreSQL & SQL",
+    body: "Joins, subqueries, aggregations, GROUP BY, HAVING, operators, and wildcards — through hands-on exercises and SQL problems on LeetCode. Also studying database normalization and concurrency control.",
   },
   {
-    emoji: "🧩",
-    heading: "Solving problems on LeetCode",
-    body: "Daily practice with data structures and algorithms. Not grinding for interviews — building the kind of fluency that makes hard problems feel approachable. (@iamshammas)",
+    emoji: "🛠️",
+    heading: "Maintaining & improving SoleDrop",
+    body: "My Django e-commerce project is deployed and production-style — custom auth, product/variant/inventory management, cart and checkout, and Telegram order notifications. Still adding incremental improvements while keeping it deployment-ready.",
   },
   {
-    emoji: "📖",
-    heading: "Reading about system design",
-    body: "Learning how real systems are architected — databases, caching, load balancing. Not because I need to design them tomorrow, but because understanding the bigger picture makes me a better developer.",
+    emoji: "📝",
+    heading: "Writing GitHub markdown notes",
+    body: "Documenting everything I learn — DRF concepts, SQL patterns, deployment lessons — as markdown notes on GitHub. Built for interview prep and long-term revision, not just to look active.",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function Now() {
               marginBottom: "0.5rem",
             }}
           >
-            Updated May 2026
+            Updated June 2026
           </span>
         </div>
         <p style={{ color: "var(--muted-foreground)", marginTop: "0.75rem", maxWidth: "500px", lineHeight: 1.6 }}>

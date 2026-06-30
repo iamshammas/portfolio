@@ -7,18 +7,21 @@ const certs = [
   {
     name: "Certified Penetration Tester (CPT)",
     org: "RedTeam Hacker Academy",
+    date: "Jan 2023",
     color: "var(--security)",
     bg: "var(--security-muted)",
   },
   {
     name: "Bug Bounty Hunter (BBH)",
     org: "RedTeam Hacker Academy",
+    date: "Mar 2023",
     color: "var(--security)",
     bg: "var(--security-muted)",
   },
   {
     name: "Python Django",
     org: "Avodha",
+    date: "Sep 2024",
     color: "var(--accent)",
     bg: "var(--accent-muted)",
   },
@@ -145,16 +148,16 @@ export default function Experience() {
                     style={{
                       padding: "0.25rem 0.75rem",
                       borderRadius: "100px",
-                      background: "color-mix(in srgb, var(--success) 15%, transparent)",
-                      border: "1px solid color-mix(in srgb, var(--success) 30%, transparent)",
+                      background: "var(--muted)",
+                      border: "1px solid var(--border)",
                       fontSize: "0.78rem",
-                      color: "var(--success)",
+                      color: "var(--muted-foreground)",
                       fontFamily: "var(--font-jetbrains), monospace",
                       fontWeight: 600,
                       whiteSpace: "nowrap",
                     }}
                   >
-                    Aug 2025 – Present
+                    Aug 2025 – Jun 2026
                   </span>
                 </div>
               </div>
@@ -168,18 +171,18 @@ export default function Experience() {
                 marginBottom: "1.25rem",
               }}
             >
-              Working in an EdTech environment that runs technical training programs in Python, 
-              Django, DRF, and PostgreSQL. My daily work involves understanding learner 
-              progress, communicating technical concepts clearly, and improving how 
-              the academic process works.
+              Worked in an EdTech environment that ran technical training programs in Python,
+              Django, DRF, and PostgreSQL. My day-to-day involved understanding learner
+              progress, communicating technical concepts clearly, and improving how
+              the academic process worked.
             </p>
 
             <div style={{ display: "grid", gap: "0.6rem" }} className="exp-bullets">
               {[
-                { label: "Analytical thinking", desc: "Identifying learning gaps through performance analysis and implementing corrective actions" },
-                { label: "Clear communication", desc: "Delivering career guidance including resume preparation and interview readiness coaching" },
-                { label: "Process improvement", desc: "Coordinating with trainers and operations to improve academic workflows and outcomes" },
-                { label: "Mentoring", desc: "Supporting students through technical and professional development challenges" },
+                { label: "Analytical thinking", desc: "Identified learning gaps through performance analysis and implemented corrective actions" },
+                { label: "Clear communication", desc: "Delivered career guidance including resume preparation and interview readiness coaching" },
+                { label: "Process improvement", desc: "Coordinated with trainers and operations to improve academic workflows and outcomes" },
+                { label: "Mentoring", desc: "Supported students through technical and professional development challenges" },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -270,7 +273,7 @@ export default function Experience() {
                     fontFamily: "var(--font-jetbrains), monospace",
                   }}
                 >
-                  2021 – 2025
+                  Oct 2021 – Oct 2025
                 </p>
               </div>
             </div>
@@ -331,16 +334,36 @@ export default function Experience() {
                       border: `1px solid color-mix(in srgb, ${cert.color} 25%, transparent)`,
                     }}
                   >
-                    <p
+                    <div
                       style={{
-                        fontWeight: 600,
-                        fontSize: "0.875rem",
-                        color: cert.color,
-                        marginBottom: "0.2rem",
+                        display: "flex",
+                        alignItems: "flex-start",
+                        justifyContent: "space-between",
+                        gap: "0.5rem",
                       }}
                     >
-                      {cert.name}
-                    </p>
+                      <p
+                        style={{
+                          fontWeight: 600,
+                          fontSize: "0.875rem",
+                          color: cert.color,
+                          marginBottom: "0.2rem",
+                        }}
+                      >
+                        {cert.name}
+                      </p>
+                      <span
+                        style={{
+                          fontSize: "0.7rem",
+                          color: "var(--muted-foreground)",
+                          fontFamily: "var(--font-jetbrains), monospace",
+                          whiteSpace: "nowrap",
+                          marginTop: "0.1rem",
+                        }}
+                      >
+                        {cert.date}
+                      </span>
+                    </div>
                     <p
                       style={{
                         fontSize: "0.8rem",

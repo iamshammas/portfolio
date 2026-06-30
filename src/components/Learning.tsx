@@ -1,22 +1,25 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Code2, Shield, BookOpen, TrendingUp, ExternalLink } from "lucide-react";
+import { Code2, Database, Shield, BookOpen, TrendingUp, ExternalLink } from "lucide-react";
 
 const timeline = [
   { year: "2021", label: "Started B.Tech IT", note: "Anna University" },
-  { year: "2023", label: "Python Django Cert", note: "Avodha — formal training" },
-  { year: "2024", label: "CPT Certification", note: "RedTeam Hacker Academy" },
-  { year: "2024", label: "Bug Bounty Hunter (BBH)", note: "RedTeam Hacker Academy" },
-  { year: "2025", label: "Built Soledrop", note: "Full Django e-commerce platform" },
-  { year: "Now", label: "Building DRF API Project", note: "REST backend, JWT, PostgreSQL", active: true },
+  { year: "Jan 2023", label: "CPT Certification", note: "RedTeam Hacker Academy" },
+  { year: "Mar 2023", label: "Bug Bounty Hunter (BBH)", note: "RedTeam Hacker Academy" },
+  { year: "Sep 2024", label: "Python Django Certification", note: "Avodha" },
+  { year: "2025", label: "Graduated B.Tech IT", note: "Anna University" },
+  { year: "Aug 2025", label: "Joined Bridgeon Skillversity", note: "Academic Advisor" },
+  { year: "2026", label: "Built & Deployed SoleDrop", note: "Production-style Django e-commerce app" },
+  { year: "Jun 2026", label: "Left Bridgeon, studying full-time", note: "Aug 2025 – Jun 2026" },
+  { year: "Now", label: "Deep diving into DRF & PostgreSQL", note: "Generic Views, Mixins, ViewSets, SQL", active: true },
 ];
 
 const currentlyLearning = [
-  { icon: <Code2 size={16} />, label: "DRF API Architecture", desc: "Designing RESTful backends meant to be consumed by separate frontends", color: "var(--accent)" },
-  { icon: <Shield size={16} />, label: "Web App Security", desc: "Revisiting OWASP Top 10 from a developer's perspective", color: "var(--security)" },
-  { icon: <TrendingUp size={16} />, label: "System Design Basics", desc: "Reading about how systems scale, from monolith to microservices", color: "#f59e0b" },
-  { icon: <BookOpen size={16} />, label: "Algorithm Practice", desc: "Daily LeetCode problems focused on data structures and problem solving", color: "#10b981" },
+  { icon: <Code2 size={16} />, label: "DRF: Generic Views & Mixins", desc: "Working through GenericAPIView, Mixins, and ViewSets — Nested Serializers next", color: "var(--accent)" },
+  { icon: <Database size={16} />, label: "PostgreSQL & SQL", desc: "Joins, subqueries, aggregations, normalization, and concurrency control", color: "#10b981" },
+  { icon: <Shield size={16} />, label: "Production Django", desc: "Deployment, Cloudinary integration, and debugging issues that only show up live", color: "var(--security)" },
+  { icon: <BookOpen size={16} />, label: "Algorithm & SQL Practice", desc: "Daily LeetCode problems split between arrays and SQL queries", color: "#f59e0b" },
 ];
 
 export default function Learning() {
@@ -128,7 +131,7 @@ export default function Learning() {
                         style={{
                           fontWeight: 600,
                           fontSize: "0.9rem",
-                          color: item.active ? "var(--foreground)" : "var(--foreground)",
+                          color: "var(--foreground)",
                         }}
                       >
                         {item.label}
@@ -227,9 +230,9 @@ export default function Learning() {
               </a>
             </div>
             <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", lineHeight: 1.6 }}>
-              Actively solving algorithmic problems to build fluency in data structures,
-              dynamic programming, and problem-solving patterns. Focused consistency
-              over volume.
+              Splitting practice between array problems and SQL queries — recently
+              solved Remove Element, Third Maximum Number, and a string of SQL
+              problems to reinforce what I&apos;m learning in PostgreSQL.
             </p>
           </div>
 

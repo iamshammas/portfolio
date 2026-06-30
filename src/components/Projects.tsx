@@ -1,16 +1,16 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { GitBranch, ExternalLink, ShoppingCart, Lock, Package, Clock } from "lucide-react";
+import { Github, ExternalLink, ShoppingCart, Lock, Package, Bell, Layers, Clock } from "lucide-react";
 
 const features = [
-  { icon: <Lock size={14} />, text: "JWT-based user authentication & session management" },
-  { icon: <Package size={14} />, text: "Product catalog with category filtering & search" },
-  { icon: <ShoppingCart size={14} />, text: "Cart system with persistent state across sessions" },
-  { icon: <Clock size={14} />, text: "Full order workflow: placement, history & COD checkout" },
+  { icon: <Lock size={14} />, text: "Custom authentication system" },
+  { icon: <Package size={14} />, text: "Product, variant, and inventory management" },
+  { icon: <ShoppingCart size={14} />, text: "Shopping cart, checkout, and order management" },
+  { icon: <Bell size={14} />, text: "Telegram notifications for new orders & status updates" },
 ];
 
-const techStack = ["Python", "Django", "PostgreSQL", "JavaScript", "Bootstrap", "HTML/CSS"];
+const techStack = ["Python", "Django", "PostgreSQL", "Cloudinary", "JavaScript", "Render"];
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
@@ -116,7 +116,7 @@ export default function Projects() {
                     fontWeight: 600,
                   }}
                 >
-                  Featured Project
+                  Featured Project · Deployed
                 </span>
               </div>
               <h3
@@ -128,10 +128,10 @@ export default function Projects() {
                   lineHeight: 1.1,
                 }}
               >
-                Soledrop
+                SoleDrop
               </h3>
               <p style={{ color: "var(--muted-foreground)", fontSize: "0.9rem", marginTop: "0.25rem" }}>
-                E-Commerce Platform
+                Production-Style E-Commerce Platform
               </p>
             </div>
 
@@ -163,7 +163,7 @@ export default function Projects() {
                   (e.currentTarget as HTMLElement).style.color = "var(--foreground)";
                 }}
               >
-                <GitBranch size={15} /> Code
+                <Github size={15} /> Code
               </a>
             </div>
           </div>
@@ -176,10 +176,10 @@ export default function Projects() {
               maxWidth: "700px",
             }}
           >
-            A full-stack e-commerce web application built with Django, implementing
-            an end-to-end shopping experience from product browsing to order placement.
-            Built to practice real-world Django architecture: models, views, forms,
-            authentication, and template rendering working together as a cohesive system.
+            A full-stack Django e-commerce application built and deployed as a real,
+            production-style project — not stopped at local development. SoleDrop
+            handles authentication, inventory across product variants, the full
+            cart-to-order lifecycle, and real-time order notifications via Telegram.
           </p>
         </div>
 
@@ -279,23 +279,49 @@ export default function Projects() {
                   color: "var(--muted-foreground)",
                   textTransform: "uppercase",
                   letterSpacing: "0.08em",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.4rem",
                 }}
               >
-                Key Lessons
+                <Layers size={14} /> Architecture Highlight
               </h4>
               <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", lineHeight: 1.7 }}>
-                Building Soledrop taught me how Django&apos;s ORM handles complex relationships
-                between products, categories, and orders. I learned to think about
-                state management on the server side — something that doesn&apos;t come up in
-                tutorials. The auth system reinforced why secure session handling matters
-                in real applications.
+                Order creation logic lives in a dedicated service layer instead of
+                inside views, keeping business logic out of the request/response
+                cycle. Database writes during order creation are wrapped in
+                transaction management to guarantee consistency if something fails
+                mid-process.
+              </p>
+            </div>
+
+            <div>
+              <h4
+                style={{
+                  fontFamily: "var(--font-syne), sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.9rem",
+                  marginBottom: "0.75rem",
+                  color: "var(--muted-foreground)",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.08em",
+                }}
+              >
+                Key Lesson
+              </h4>
+              <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", lineHeight: 1.7 }}>
+                Taking SoleDrop from local development to a real deployment surfaced
+                problems tutorials never cover — media storage with Cloudinary,
+                environment configuration, and debugging issues that only show up
+                in production. That gap taught me more about real-world Django
+                development than any course did.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Upcoming project card */}
+      {/* In-progress learning card */}
       <div
         className="section-fade"
         style={{
@@ -356,7 +382,7 @@ export default function Projects() {
                 fontWeight: 600,
               }}
             >
-              In Progress
+              Currently Learning
             </span>
           </div>
           <h3
@@ -366,14 +392,15 @@ export default function Projects() {
               fontSize: "1.1rem",
             }}
           >
-            DRF REST API — Standalone Backend
+            DRF Generic Views, Mixins & ViewSets
           </h3>
           <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", marginTop: "0.25rem", lineHeight: 1.6 }}>
-            A RESTful backend API built with Django REST Framework, JWT auth, and PostgreSQL — 
-            designed to be consumed by a separate frontend. Documenting the build publicly on GitHub.
+            Deepening my DRF knowledge beyond basic serializers — working through
+            GenericAPIView, Mixins, and ViewSets, with Nested Serializers next.
+            Notes documented on GitHub as I go.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.75rem" }}>
-            {["DRF", "JWT", "PostgreSQL", "REST API"].map((t) => (
+            {["GenericAPIView", "Mixins", "ViewSets", "Nested Serializers"].map((t) => (
               <span
                 key={t}
                 style={{
@@ -396,7 +423,7 @@ export default function Projects() {
       <style>{`
         @media (min-width: 768px) {
           .features-grid { grid-template-columns: 1fr 1fr !important; }
-          .stack-lessons { grid-template-columns: 1fr 1fr !important; }
+          .stack-lessons { grid-template-columns: 1fr !important; }
           .project-inner { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>

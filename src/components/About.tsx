@@ -94,17 +94,19 @@ export default function About() {
             </p>
             <p>
               That question led me to pursue penetration testing certifications
-              at RedTeam Hacker Academy. I&apos;m not a full-time security
+              at RedTeam Hacker Academy early on — CPT in January 2023 and Bug
+              Bounty Hunter two months later. I&apos;m not a full-time security
               professional — but I build software with a security-conscious
               mindset. I think about authentication flows, input validation, and
               privilege escalation the way most junior developers don&apos;t yet.
             </p>
             <p>
-              Currently, I work as an Academic Advisor at Bridgeon Skillversity,
-              mentoring students through technical learning programs. In parallel,
-              I&apos;m actively building projects, solving problems on LeetCode,
-              and preparing for my transition into a full-time software
-              engineering role.
+              From August 2025 to June 2026, I worked as an Academic Advisor at
+              Bridgeon Skillversity, mentoring students through technical
+              learning programs. Since leaving, I&apos;ve been studying full-time —
+              going deep into Django REST Framework and PostgreSQL, building
+              and deploying SoleDrop as a production-style project, and
+              actively applying for backend developer roles.
             </p>
           </div>
         </div>
@@ -123,7 +125,7 @@ export default function About() {
             {
               icon: <Code2 size={20} style={{ color: "var(--accent)" }} />,
               title: "Backend First",
-              body: "I gravitate toward server-side logic, database design, and API architecture. Building things that work correctly under the hood matters more to me than pixel-perfect UIs.",
+              body: "I gravitate toward server-side logic, database design, and API architecture. Right now that means going deep on DRF — serializers, generic views, mixins, and viewsets.",
               accent: "var(--accent-muted)",
               border: "var(--accent)",
             },
@@ -137,7 +139,7 @@ export default function About() {
             {
               icon: <BookOpen size={20} style={{ color: "var(--success)" }} />,
               title: "Self-Driven",
-              body: "Everything I know about Django, DRF, PostgreSQL, and web security came from deliberate, self-directed learning. I don't stop when something is hard.",
+              body: "Everything I know about Django, DRF, PostgreSQL, and SQL came from deliberate, self-directed learning — documented in my own GitHub markdown notes for long-term retention.",
               accent: "color-mix(in srgb, var(--success) 15%, transparent)",
               border: "var(--success)",
             },
