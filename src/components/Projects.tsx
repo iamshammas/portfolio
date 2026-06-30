@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Github, ExternalLink, ShoppingCart, Lock, Package, Bell, Layers, Clock } from "lucide-react";
+import { GitBranch, ExternalLink, ShoppingCart, Lock, Package, Bell, Layers, Clock } from "lucide-react";
 
 const features = [
   { icon: <Lock size={14} />, text: "Custom authentication system" },
@@ -163,7 +163,7 @@ export default function Projects() {
                   (e.currentTarget as HTMLElement).style.color = "var(--foreground)";
                 }}
               >
-                <Github size={15} /> Code
+                <GitBranch size={15} /> Code
               </a>
             </div>
           </div>
