@@ -1,25 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Code2, Database, Shield, BookOpen, TrendingUp, ExternalLink } from "lucide-react";
-
-const timeline = [
-  { year: "2021", label: "Started B.Tech IT", note: "Anna University" },
-  { year: "Jan 2023", label: "CPT Certification", note: "RedTeam Hacker Academy" },
-  { year: "Mar 2023", label: "Bug Bounty Hunter (BBH)", note: "RedTeam Hacker Academy" },
-  { year: "Sep 2024", label: "Python Django Certification", note: "Avodha" },
-  { year: "2025", label: "Graduated B.Tech IT", note: "Anna University" },
-  { year: "Aug 2025", label: "Joined Bridgeon Skillversity", note: "Academic Advisor" },
-  { year: "2026", label: "Built & Deployed SoleDrop", note: "Production-style Django e-commerce app" },
-  { year: "Jun 2026", label: "Left Bridgeon, studying full-time", note: "Aug 2025 – Jun 2026" },
-  { year: "Now", label: "Deep diving into DRF & PostgreSQL", note: "Generic Views, Mixins, ViewSets, SQL", active: true },
-];
+import { Code2, Database, ExternalLink, Container, Cloud, Zap } from "lucide-react";
 
 const currentlyLearning = [
-  { icon: <Code2 size={16} />, label: "DRF: Generic Views & Mixins", desc: "Working through GenericAPIView, Mixins, and ViewSets — Nested Serializers next", color: "var(--accent)" },
-  { icon: <Database size={16} />, label: "PostgreSQL & SQL", desc: "Joins, subqueries, aggregations, normalization, and concurrency control", color: "#10b981" },
-  { icon: <Shield size={16} />, label: "Production Django", desc: "Deployment, Cloudinary integration, and debugging issues that only show up live", color: "var(--security)" },
-  { icon: <BookOpen size={16} />, label: "Algorithm & SQL Practice", desc: "Daily LeetCode problems split between arrays and SQL queries", color: "#f59e0b" },
+  { icon: <Container size={16} />, label: "Docker", desc: "Containerization for consistent development and deployment environments", color: "var(--accent)" },
+  { icon: <Zap size={16} />, label: "CI/CD Pipelines", desc: "Automating build, test, and deployment workflows for continuous delivery", color: "#f59e0b" },
+  { icon: <Database size={16} />, label: "Redis & Celery", desc: "Caching, message brokering with Redis, and async task processing with Celery", color: "#10b981" },
+  { icon: <Cloud size={16} />, label: "AWS", desc: "Cloud services and infrastructure for scalable application deployment", color: "var(--security)" },
 ];
 
 export default function Learning() {
@@ -69,218 +57,123 @@ export default function Learning() {
         </p>
       </div>
 
-      <div style={{ display: "grid", gap: "2rem" }} className="learning-grid">
-        {/* Timeline */}
-        <div className="section-fade" style={{ transitionDelay: "0.1s" }}>
-          <h3
-            style={{
-              fontFamily: "var(--font-syne), sans-serif",
-              fontWeight: 700,
-              fontSize: "1rem",
-              marginBottom: "1.5rem",
-              color: "var(--muted-foreground)",
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-            }}
-          >
-            Trajectory
-          </h3>
-          <div style={{ position: "relative", paddingLeft: "1.5rem" }}>
-            {/* Vertical line */}
-            <div
-              style={{
-                position: "absolute",
-                left: "6px",
-                top: "8px",
-                bottom: "8px",
-                width: "1px",
-                background: "linear-gradient(to bottom, var(--accent), var(--security))",
-                opacity: 0.3,
-              }}
-            />
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-              {timeline.map((item, i) => (
-                <div key={i} style={{ display: "flex", gap: "1rem", position: "relative" }}>
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "-1.5rem",
-                      top: "6px",
-                      width: "12px",
-                      height: "12px",
-                      borderRadius: "50%",
-                      background: item.active ? "var(--accent)" : "var(--border)",
-                      border: `2px solid ${item.active ? "var(--accent)" : "var(--muted-foreground)"}`,
-                      animation: item.active ? "pulse-glow 2s ease infinite" : "none",
-                    }}
-                  />
-                  <div>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                      <span
-                        style={{
-                          fontFamily: "var(--font-jetbrains), monospace",
-                          fontSize: "0.75rem",
-                          color: item.active ? "var(--accent)" : "var(--muted-foreground)",
-                          fontWeight: 600,
-                        }}
-                      >
-                        {item.year}
-                      </span>
-                      <span
-                        style={{
-                          fontWeight: 600,
-                          fontSize: "0.9rem",
-                          color: "var(--foreground)",
-                        }}
-                      >
-                        {item.label}
-                      </span>
-                      {item.active && (
-                        <span
-                          style={{
-                            padding: "0.1rem 0.5rem",
-                            borderRadius: "100px",
-                            background: "color-mix(in srgb, var(--accent) 15%, transparent)",
-                            fontSize: "0.7rem",
-                            color: "var(--accent)",
-                            fontFamily: "var(--font-jetbrains), monospace",
-                            fontWeight: 600,
-                          }}
-                        >
-                          now
-                        </span>
-                      )}
-                    </div>
-                    <p style={{ fontSize: "0.825rem", color: "var(--muted-foreground)", marginTop: "0.2rem" }}>
-                      {item.note}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Currently learning + LeetCode */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-          {/* LeetCode */}
-          <div
-            className="section-fade card-hover"
-            style={{
-              background: "var(--card)",
-              border: "1px solid var(--border)",
-              borderRadius: "16px",
-              padding: "1.5rem",
-              transitionDelay: "0.2s",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem", flexWrap: "wrap", gap: "0.75rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    background: "color-mix(in srgb, #f59e0b 15%, transparent)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Code2 size={18} style={{ color: "#f59e0b" }} />
-                </div>
-                <div>
-                  <h3 style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "0.95rem" }}>
-                    LeetCode Practice
-                  </h3>
-                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "0.78rem", color: "var(--accent)" }}>
-                    @iamshammas
-                  </p>
-                </div>
-              </div>
-              <a
-                href="https://leetcode.com/iamshammas"
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.4rem",
-                  padding: "0.4rem 0.875rem",
-                  borderRadius: "8px",
-                  background: "var(--muted)",
-                  border: "1px solid var(--border)",
-                  color: "var(--muted-foreground)",
-                  fontSize: "0.8rem",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                  transition: "all 0.2s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)";
-                  (e.currentTarget as HTMLElement).style.color = "var(--accent)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
-                  (e.currentTarget as HTMLElement).style.color = "var(--muted-foreground)";
-                }}
-              >
-                <ExternalLink size={13} /> Profile
-              </a>
-            </div>
-            <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", lineHeight: 1.6 }}>
-              Splitting practice between array problems and SQL queries — recently
-              solved Remove Element, Third Maximum Number, and a string of SQL
-              problems to reinforce what I&apos;m learning in PostgreSQL.
-            </p>
-          </div>
-
-          {/* Currently learning cards */}
-          <div
-            className="section-fade"
-            style={{
-              transitionDelay: "0.3s",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "0.875rem",
-            }}
-          >
-            {currentlyLearning.map((item) => (
+      <div style={{ display: "grid", gap: "1.5rem" }} className="learning-grid">
+        {/* LeetCode */}
+        <div
+          className="section-fade card-hover"
+          style={{
+            background: "var(--card)",
+            border: "1px solid var(--border)",
+            borderRadius: "16px",
+            padding: "1.5rem",
+            transitionDelay: "0.1s",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem", flexWrap: "wrap", gap: "0.75rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
               <div
-                key={item.label}
-                className="card-hover"
                 style={{
-                  background: "var(--card)",
-                  border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  padding: "1.25rem",
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "10px",
+                  background: "color-mix(in srgb, #f59e0b 15%, transparent)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <div
-                  style={{
-                    width: "34px",
-                    height: "34px",
-                    borderRadius: "8px",
-                    background: `color-mix(in srgb, ${item.color} 15%, transparent)`,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: item.color,
-                    marginBottom: "0.875rem",
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <h4 style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.35rem" }}>
-                  {item.label}
-                </h4>
-                <p style={{ fontSize: "0.78rem", color: "var(--muted-foreground)", lineHeight: 1.5 }}>
-                  {item.desc}
+                <Code2 size={18} style={{ color: "#f59e0b" }} />
+              </div>
+              <div>
+                <h3 style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "0.95rem" }}>
+                  LeetCode Practice
+                </h3>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "0.78rem", color: "var(--accent)" }}>
+                  @iamshammas
                 </p>
               </div>
-            ))}
+            </div>
+            <a
+              href="https://leetcode.com/iamshammas"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
+                padding: "0.4rem 0.875rem",
+                borderRadius: "8px",
+                background: "var(--muted)",
+                border: "1px solid var(--border)",
+                color: "var(--muted-foreground)",
+                fontSize: "0.8rem",
+                fontWeight: 600,
+                textDecoration: "none",
+                transition: "all 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)";
+                (e.currentTarget as HTMLElement).style.color = "var(--accent)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+                (e.currentTarget as HTMLElement).style.color = "var(--muted-foreground)";
+              }}
+            >
+              <ExternalLink size={13} /> Profile
+            </a>
           </div>
+          <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", lineHeight: 1.6 }}>
+            Splitting practice between algorithm problems and SQL queries to
+            strengthen both problem-solving and database skills alongside
+            building projects.
+          </p>
+        </div>
+
+        {/* Currently learning cards */}
+        <div
+          className="section-fade"
+          style={{
+            transitionDelay: "0.2s",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "0.875rem",
+          }}
+        >
+          {currentlyLearning.map((item) => (
+            <div
+              key={item.label}
+              className="card-hover"
+              style={{
+                background: "var(--card)",
+                border: "1px solid var(--border)",
+                borderRadius: "12px",
+                padding: "1.25rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "34px",
+                  height: "34px",
+                  borderRadius: "8px",
+                  background: `color-mix(in srgb, ${item.color} 15%, transparent)`,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: item.color,
+                  marginBottom: "0.875rem",
+                }}
+              >
+                {item.icon}
+              </div>
+              <h4 style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.35rem" }}>
+                {item.label}
+              </h4>
+              <p style={{ fontSize: "0.78rem", color: "var(--muted-foreground)", lineHeight: 1.5 }}>
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -1,33 +1,32 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { MapPin, Zap } from "lucide-react";
 
 const nowItems = [
   {
     emoji: "🎯",
     heading: "Actively job hunting",
-    body: "Looking for Django Developer, Python Backend Developer, and Junior Software Engineer roles. Left my Academic Advisor role at Bridgeon Skillversity in June 2026 to study full-time and focus on this transition.",
+    body: "Looking for Django Developer, Python Backend Developer, and Junior Software Engineer roles. Focused full-time on this transition since leaving Bridgeon Skillversity.",
   },
   {
-    emoji: "📚",
-    heading: "Going deep on Django REST Framework",
-    body: "Working through APIView, GenericAPIView, Mixins, Generic Views, and ViewSets. Currently learning Nested Serializers and getting more practice with ViewSets specifically.",
-  },
-  {
-    emoji: "🗄️",
-    heading: "Practicing PostgreSQL & SQL",
-    body: "Joins, subqueries, aggregations, GROUP BY, HAVING, operators, and wildcards — through hands-on exercises and SQL problems on LeetCode. Also studying database normalization and concurrency control.",
+    emoji: "🐳",
+    heading: "Learning Docker, CI/CD, Redis, Celery & AWS",
+    body: "Expanding into DevOps and infrastructure — containerization, automated deployment pipelines, caching and async task processing, and cloud services for production-grade deployments.",
   },
   {
     emoji: "🛠️",
-    heading: "Maintaining & improving SoleDrop",
-    body: "My Django e-commerce project is deployed and production-style — custom auth, product/variant/inventory management, cart and checkout, and Telegram order notifications. Still adding incremental improvements while keeping it deployment-ready.",
+    heading: "Built & maintaining StockLedger",
+    body: "Multi-tenant inventory & billing REST API with FIFO costing, JWT auth, role-based access, automated PDF invoicing, and a reporting suite — built for wholesale distributors.",
   },
   {
-    emoji: "📝",
-    heading: "Writing GitHub markdown notes",
-    body: "Documenting everything I learn — DRF concepts, SQL patterns, deployment lessons — as markdown notes on GitHub. Built for interview prep and long-term revision, not just to look active.",
+    emoji: "🛒",
+    heading: "Maintaining SoleDrop",
+    body: "Deployed Django e-commerce app with custom auth, product/variant/inventory management, cart and checkout flow, and Telegram order notifications. Still adding incremental improvements.",
+  },
+  {
+    emoji: "💻",
+    heading: "Practicing on LeetCode",
+    body: "Solving algorithm and SQL problems daily to sharpen problem-solving skills and reinforce database knowledge alongside project work.",
   },
 ];
 
@@ -90,7 +89,7 @@ export default function Now() {
               marginBottom: "0.5rem",
             }}
           >
-            Updated June 2026
+            Updated August 2026
           </span>
         </div>
         <p style={{ color: "var(--muted-foreground)", marginTop: "0.75rem", maxWidth: "500px", lineHeight: 1.6 }}>

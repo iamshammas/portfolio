@@ -5,6 +5,15 @@ import { GitBranch, Star, GitFork, ExternalLink } from "lucide-react";
 
 const repos = [
   {
+    name: "stockledger",
+    desc: "Multi-tenant inventory & billing REST API for wholesale distributors. FIFO costing, JWT auth, automated PDF invoicing, reporting suite.",
+    stars: 0,
+    forks: 0,
+    lang: "Python",
+    langColor: "#3572A5",
+    url: "https://github.com/iamshammas/stockledger",
+  },
+  {
     name: "soledrop",
     desc: "Full-stack e-commerce platform built with Django. User auth, product catalog, cart management, order flow.",
     stars: 0,
