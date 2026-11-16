@@ -174,6 +174,29 @@ export default function Projects() {
               >
                 <GitBranch size={15} /> Code
               </a>
+
+               <a
+                href="https://stockledger-lime.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.4rem",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "8px",
+                  background: "var(--muted)",
+                  border: "1px solid var(--border)",
+                  color: "var(--foreground)",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  transition: "all 0.2s ease",
+                }}
+              >
+                <ExternalLink size={15} /> Live Demo
+              </a>
+
             </div>
           </div>
 
