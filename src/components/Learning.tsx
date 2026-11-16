@@ -11,8 +11,8 @@ const timeline = [
   { year: "2025", label: "Graduated B.Tech IT", note: "Anna University" },
   { year: "Aug 2025", label: "Joined Bridgeon Skillversity", note: "Academic Advisor" },
   { year: "2026", label: "Built & Deployed SoleDrop", note: "Production-style Django e-commerce app" },
+  { year: "Jun 2026", label: "Left Bridgeon Skillversity", note: "Aug 2025 – Jun 2026" },
   { year: "2026", label: "Built StockLedger", note: "Multi-tenant inventory & billing REST API" },
-  { year: "Jun 2026", label: "Left Bridgeon", note: "Aug 2025 – Jun 2026" },
   { year: "Now", label: "Learning FastAPI, CI/CD, Redis, Celery & AWS", note: "DevOps & infrastructure", active: true },
 ];
 

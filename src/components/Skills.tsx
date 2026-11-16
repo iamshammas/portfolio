@@ -67,7 +67,7 @@ const skillGroups = [
     icon: <Puzzle size={18} />,
     color: "#8b5cf6",
     bg: "color-mix(in srgb, #8b5cf6 15%, transparent)",
-    skills: ["Cloudinary", "WeasyPrint"],
+    skills: ["Cloudinary", "WeasyPrint", "requests"],
   },
 
 ];
