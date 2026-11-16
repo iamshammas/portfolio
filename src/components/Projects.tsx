@@ -193,6 +193,14 @@ export default function Projects() {
                   textDecoration: "none",
                   transition: "all 0.2s ease",
                 }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)";
+                  (e.currentTarget as HTMLElement).style.color = "var(--accent)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+                  (e.currentTarget as HTMLElement).style.color = "var(--foreground)";
+                }}
               >
                 <ExternalLink size={15} /> Live Demo
               </a>
