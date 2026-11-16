@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Code2, Database, ExternalLink, Container, Cloud, Zap } from "lucide-react";
+import { Code2, Database, ExternalLink, Cloud, Zap, Workflow } from "lucide-react";
 
 const timeline = [
   { year: "2021", label: "Started B.Tech IT", note: "Anna University" },
@@ -12,13 +12,13 @@ const timeline = [
   { year: "Aug 2025", label: "Joined Bridgeon Skillversity", note: "Academic Advisor" },
   { year: "2026", label: "Built & Deployed SoleDrop", note: "Production-style Django e-commerce app" },
   { year: "2026", label: "Built StockLedger", note: "Multi-tenant inventory & billing REST API" },
-  { year: "Jun 2026", label: "Left Bridgeon, studying full-time", note: "Aug 2025 – Jun 2026" },
-  { year: "Now", label: "Learning Docker, CI/CD, Redis, Celery & AWS", note: "DevOps & infrastructure", active: true },
+  { year: "Jun 2026", label: "Left Bridgeon", note: "Aug 2025 – Jun 2026" },
+  { year: "Now", label: "Learning FastAPI, CI/CD, Redis, Celery & AWS", note: "DevOps & infrastructure", active: true },
 ];
 
 const currentlyLearning = [
-  { icon: <Container size={16} />, label: "Docker", desc: "Containerization for consistent development and deployment environments", color: "var(--accent)" },
-  { icon: <Zap size={16} />, label: "CI/CD Pipelines", desc: "Automating build, test, and deployment workflows for continuous delivery", color: "#f59e0b" },
+  { icon: <Zap size={16} />, label: "FastAPI", desc: "Containerization for consistent development and deployment environments", color: "var(--accent)" },
+  { icon: <Workflow size={16} />, label: "CI/CD Pipelines", desc: "Automating build, test, and deployment workflows for continuous delivery", color: "#f59e0b" },
   { icon: <Database size={16} />, label: "Redis & Celery", desc: "Caching, message brokering with Redis, and async task processing with Celery", color: "#10b981" },
   { icon: <Cloud size={16} />, label: "AWS", desc: "Cloud services and infrastructure for scalable application deployment", color: "var(--security)" },
 ];

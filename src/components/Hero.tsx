@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { GitBranch, Link2, Mail, Download, ArrowDown, Shield } from "lucide-react";
 
-const roles = ["Python Developer", "Django Developer", "Backend Engineer", "Security-Conscious Builder"];
+const roles = ["Python Developer", "Django Developer", "Backend Engineer", "Junior Python Developer", " Backend Developer", "Software Engineer", "Python Backend Developer", "Junior Backend Developer", "Software Developer", "Software Engineer", "Associate Software Engineer"];
 
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);

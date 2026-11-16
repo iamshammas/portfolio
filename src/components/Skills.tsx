@@ -2,52 +2,74 @@
 
 import { useEffect, useRef } from "react";
 import {
-  Server, Database, Globe, Shield, Layout, Wrench,
+  Server, Database, Code2, FileCode2, ShieldCheck, CloudCog, Monitor, Puzzle
 } from "lucide-react";
 
 const skillGroups = [
   {
-    label: "Backend Development",
+    label: "Programming Languages",
+    icon: <Code2 size={18} />,
+    color: "var(--accent)",
+    bg: "var(--accent-muted)",
+    skills: ["Python", "JavaScript", "SQL"],
+  },
+
+  {
+    label: "Backend Development & Frameworks",
     icon: <Server size={18} />,
     color: "var(--accent)",
     bg: "var(--accent-muted)",
-    skills: ["Python", "Django", "Django REST Framework", "REST API Development", "Django ORM", "Serializers", "APIView", "GenericAPIView", "Mixins", "ViewSets", "Service Layer Pattern", "Django Signals", "Transaction Management", "Object-Oriented Programming"],
+    skills: ["Django", "Django REST Framework", "REST API Development", "Django ORM"],
   },
+  
+  {
+    label: "API Documentation & Testing",
+    icon: <FileCode2 size={18} />,
+    color: "var(--accent)",
+    bg: "var(--accent-muted)",
+    skills: ["Swagger (OpenAPI)", "Postman", "API Testing"],
+  },
+
   {
     label: "Authentication & Security",
-    icon: <Shield size={18} />,
+    icon: <ShieldCheck size={18} />,
     color: "var(--security)",
     bg: "var(--security-muted)",
-    skills: ["JWT Authentication", "OAuth 2.0", "Custom Authentication", "Authorization", "Custom Access-Control Decorators", "Penetration Testing", "Bug Bounty Hunting", "OWASP Top 10", "Web App Security"],
+    skills: ["JWT Authentication", "OAuth 2.0", "Role-Based Access Control (RBAC)", "Application Security", "Penetration Testing"],
   },
+
   {
-    label: "Database Technologies",
+    label: "Databases",
     icon: <Database size={18} />,
     color: "#10b981",
     bg: "color-mix(in srgb, #10b981 15%, transparent)",
-    skills: ["PostgreSQL", "MySQL", "SQL", "Database Design", "Joins", "Subqueries", "Aggregate Functions", "GROUP BY / HAVING", "Database Normalization", "Concurrency Control"],
+    skills: ["PostgreSQL", "MySQL", "Database Design", "Query Optimization"],
   },
+
   {
-    label: "API & Integrations",
-    icon: <Globe size={18} />,
+    label: "Cloud, DevOps & Version Control",
+    icon: <CloudCog size={18} />,
+    color: "#3b82f6",
+    bg: "color-mix(in srgb, #3b82f6 15%, transparent)",
+    skills: ["Microsoft Azure", "Docker", "Linux", "Git", "GitHub" ],
+  },
+
+  {
+    label: "Frontend Technologies",
+    icon: <Monitor size={18} />,
     color: "#f59e0b",
     bg: "color-mix(in srgb, #f59e0b 15%, transparent)",
-    skills: ["REST APIs", "Nested Serializers", "Swagger (OpenAPI)", "Cloudinary Integration", "API Integration", "HTTP Clients", "Postman", "API Testing"],
+    skills: ["HTML", "CSS", "Bootstrap", "Tailwind CSS"],
   },
+
   {
-    label: "Frontend Foundations",
-    icon: <Layout size={18} />,
-    color: "#ec4899",
-    bg: "color-mix(in srgb, #ec4899 15%, transparent)",
-    skills: ["JavaScript (ES6+)", "HTML5 & CSS3", "Tailwind CSS", "Bootstrap", "Responsive Design"],
+    label: "Third-Party Integrations & Libraries",
+    icon: <Puzzle size={18} />,
+    color: "#8b5cf6",
+    bg: "color-mix(in srgb, #8b5cf6 15%, transparent)",
+    skills: ["Cloudinary", "WeasyPrint"],
   },
-  {
-    label: "Tools & Workflow",
-    icon: <Wrench size={18} />,
-    color: "#64748b",
-    bg: "color-mix(in srgb, #64748b 15%, transparent)",
-    skills: ["Git & GitHub", "Linux / Bash", "Render (Deployment)", "Cloudinary", "WeasyPrint", "psql", "Debugging", "Exception Handling", "Markdown Documentation"],
-  },
+
 ];
 
 export default function Skills() {

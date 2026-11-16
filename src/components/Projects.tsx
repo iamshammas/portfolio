@@ -1,25 +1,25 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { GitBranch, ExternalLink, ShoppingCart, Lock, Package, Bell, Layers, Clock, Database, FileText, Shield, BarChart3 } from "lucide-react";
+import { GitBranch, ExternalLink, Wallet, Lock, Package, Bell, Layers, Clock, Database, FileText, Shield, Cloud } from "lucide-react";
 
 const soledropFeatures = [
-  { icon: <Lock size={14} />, text: "Custom authentication system" },
-  { icon: <Package size={14} />, text: "Product, variant, and inventory management" },
-  { icon: <ShoppingCart size={14} />, text: "Shopping cart, checkout, and order management" },
-  { icon: <Bell size={14} />, text: "Telegram notifications for new orders & status updates" },
+  { icon: <Lock size={14} />, text: "Custom authentication system with secure user accounts" },
+  { icon: <Package size={14} />, text: "Product, variant, inventory, and order management with cart and checkout" },
+  { icon: <Wallet size={14} />, text: "Digital wallet with balance top-ups, daily login rewards, and wallet credits" },
+  { icon: <Bell size={14} />, text: "Telegram notifications for new orders and order status updates" },
 ];
 
-const soledropStack = ["Python", "Django", "PostgreSQL", "Cloudinary", "JavaScript", "Render"];
+const soledropStack = ["Python", "Django", "PostgreSQL", "Cloudinary", "JavaScript", "Render", "Razorpay"];
 
 const stockledgerFeatures = [
-  { icon: <Shield size={14} />, text: "100% multi-tenant isolation with JWT auth & role-based access control" },
-  { icon: <Database size={14} />, text: "FIFO inventory costing + append-only audit ledger for transaction immutability" },
-  { icon: <FileText size={14} />, text: "Automated PDF invoicing with WeasyPrint, eliminating manual spreadsheets" },
-  { icon: <BarChart3 size={14} />, text: "Reporting suite: stock valuation, sales analytics, and low-stock alerts" },
+  { icon: <Shield size={14} />, text: "Multi-tenant architecture with JWT authentication and role-based access control" },
+  { icon: <Database size={14} />, text: "FIFO inventory costing and append-only audit ledger for transaction integrity" },
+  { icon: <FileText size={14} />, text: "Automated PDF invoicing with WeasyPrint and reporting for stock valuation, sales analytics, and low-stock alerts" },
+  { icon: <Cloud size={14} />, text: "Docker containerization and deployment on Microsoft Azure" },
 ];
 
-const stockledgerStack = ["Python", "Django", "DRF", "PostgreSQL", "JWT", "WeasyPrint"];
+const stockledgerStack = ["Python", "Django", "DRF", "PostgreSQL", "JWT", "WeasyPrint", "Docker", "Azure"];
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
@@ -185,10 +185,8 @@ export default function Projects() {
               maxWidth: "700px",
             }}
           >
-            A production REST API built with Django and DRF for wholesale distributors.
-            Features 8+ endpoints with complete multi-tenant isolation, FIFO inventory
-            costing, transactional financial workflows (invoices, payments, stock reversal),
-            and automated PDF invoicing — replacing manual spreadsheet dependency.
+            A production-ready REST API built with Django and Django REST Framework (DRF) for wholesale distributors, featuring 8+ endpoints, robust multi-tenant isolation, FIFO-based inventory costing, and transactional financial workflows covering invoices, payments, and stock reversals. 
+            Includes automated PDF invoice generation, Docker containerization, and deployment on Microsoft Azure — eliminating manual spreadsheet dependencies.
           </p>
         </div>
 
@@ -456,10 +454,9 @@ export default function Projects() {
               maxWidth: "700px",
             }}
           >
-            A full-stack Django e-commerce application built and deployed as a real,
-            production-style project. SoleDrop handles authentication, inventory across
-            product variants, the full cart-to-order lifecycle, and real-time order
-            notifications via Telegram.
+            A full-stack Django e-commerce application built and deployed as a real, production-style project. 
+            SoleDrop features user authentication, inventory management across product variants, wallet top-up functionality, daily login rewards, 
+            and a complete cart-to-order lifecycle, along with real-time order notifications via Telegram.
           </p>
         </div>
 
@@ -646,15 +643,15 @@ export default function Projects() {
               fontSize: "1.1rem",
             }}
           >
-            Docker, CI/CD, Redis, Celery & AWS
+            FastAPI, CI/CD pipelines, Redis, Celery & AWS
           </h3>
           <p style={{ fontSize: "0.875rem", color: "var(--muted-foreground)", marginTop: "0.25rem", lineHeight: 1.6 }}>
             Expanding into DevOps and infrastructure — learning containerization with
-            Docker, CI/CD pipelines for automated deployments, Redis for caching and
+            FastAPI, CI/CD pipelines for automated deployments, Redis for caching and
             message brokering, Celery for async task processing, and AWS for cloud services.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.75rem" }}>
-            {["Docker", "CI/CD Pipelines", "Redis", "Celery", "AWS"].map((t) => (
+            {["FastAPI", "CI/CD Pipelines", "Redis", "Celery", "AWS"].map((t) => (
               <span
                 key={t}
                 style={{

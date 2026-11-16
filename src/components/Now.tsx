@@ -10,7 +10,7 @@ const nowItems = [
   },
   {
     emoji: "🐳",
-    heading: "Learning Docker, CI/CD, Redis, Celery & AWS",
+    heading: "Learning FastAPI, CI/CD pipelines, Redis, Celery & AWS",
     body: "Expanding into DevOps and infrastructure — containerization, automated deployment pipelines, caching and async task processing, and cloud services for production-grade deployments.",
   },
   {

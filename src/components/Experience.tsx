@@ -179,7 +179,7 @@ export default function Experience() {
 
             <div style={{ display: "grid", gap: "0.6rem" }} className="exp-bullets">
               {[
-                { label: "Analytical thinking", desc: "Identified learning gaps through performance analysis and implemented corrective actions" },
+                { label: "Analytical thinking", desc: " Identified learning gaps through performance analysis and implemented corrective actions" },
                 { label: "Clear communication", desc: "Delivered career guidance including resume preparation and interview readiness coaching" },
                 { label: "Process improvement", desc: "Coordinated with trainers and operations to improve academic workflows and outcomes" },
                 { label: "Mentoring", desc: "Supported students through technical and professional development challenges" },
