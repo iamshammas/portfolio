@@ -267,7 +267,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/Muhammed_Shammas_Resume.pdf"
             download
             style={{
               display: "inline-flex",
